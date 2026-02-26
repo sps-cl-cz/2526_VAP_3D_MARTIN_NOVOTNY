@@ -1,0 +1,66 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2_calculator.MainPage"
+             Title="Kalkulačka"
+             BackgroundColor="#F5F5F5">
+
+    <Grid RowDefinitions="Auto,Auto,*" Padding="20">
+
+        <!-- Přepínače režimu -->
+        <HorizontalStackLayout Grid.Row="0" Spacing="10" HorizontalOptions="Center">
+            <Button x:Name="LightModeButton" Text="Světlý režim" Clicked="OnLightModeClicked" BackgroundColor="#E3F2FD" TextColor="Black"/>
+            <Button x:Name="DarkModeButton" Text="Tmavý režim" Clicked="OnDarkModeClicked" BackgroundColor="#212121" TextColor="White"/>
+        </HorizontalStackLayout>
+
+        <!-- Displej -->
+        <Frame Grid.Row="1"
+               x:Name="DisplayFrame"
+               BorderColor="#2196F3"
+               BackgroundColor="White"
+               Margin="0,0,0,20"
+               CornerRadius="8"
+               Padding="0">
+            <Label x:Name="DisplayLabel"
+                   Text="0"
+                   FontSize="32"
+                   HorizontalTextAlignment="End"
+                   Padding="10"
+                   TextColor="#2196F3"/>
+        </Frame>
+
+        <!-- Tlačítka -->
+        <Grid Grid.Row="2"
+              x:Name="ButtonsGrid"
+              ColumnDefinitions="*,*,*,*"
+              RowDefinitions="*,*,*,*,*"
+              ColumnSpacing="10"
+              RowSpacing="10">
+
+            <Button x:Name="Btn7" Text="7" Grid.Row="0" Grid.Column="0" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="Btn8" Text="8" Grid.Row="0" Grid.Column="1" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="Btn9" Text="9" Grid.Row="0" Grid.Column="2" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="BtnPlus" Text="+" Grid.Row="0" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="Black" TextColor="White"/>
+
+            <Button x:Name="Btn4" Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="Btn5" Text="5" Grid.Row="1" Grid.Column="1" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="Btn6" Text="6" Grid.Row="1" Grid.Column="2" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="BtnMinus" Text="-" Grid.Row="1" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="Black" TextColor="White"/>
+
+            <Button x:Name="Btn1" Text="1" Grid.Row="2" Grid.Column="0" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="Btn2" Text="2" Grid.Row="2" Grid.Column="1" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="Btn3" Text="3" Grid.Row="2" Grid.Column="2" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="BtnMultiply" Text="*" Grid.Row="2" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="Black" TextColor="White"/>
+
+            <Button x:Name="Btn0" Text="0" Grid.Row="3" Grid.Column="0" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="BtnComma" Text="," Grid.Row="3" Grid.Column="1" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="BtnC" Text="C" Grid.Row="3" Grid.Column="2" Clicked="OnClearClicked" BackgroundColor="#FF9800" TextColor="Black" FontAttributes="Bold"/>
+            <Button x:Name="BtnDivide" Text="/" Grid.Row="3" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="Black" TextColor="White"/>
+
+            <Button x:Name="BtnLeft" Text="(" Grid.Row="4" Grid.Column="0" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="BtnRight" Text=")" Grid.Row="4" Grid.Column="1" Clicked="OnButtonClicked" BackgroundColor="Black" TextColor="White"/>
+            <Button x:Name="BtnEquals" Text="=" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Clicked="OnCalculateClicked" BackgroundColor="#4CAF50" TextColor="White" FontAttributes="Bold"/>
+        </Grid>
+
+    </Grid>
+</ContentPage>
+

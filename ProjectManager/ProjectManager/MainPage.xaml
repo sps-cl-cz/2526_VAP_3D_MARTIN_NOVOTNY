@@ -1,0 +1,44 @@
+﻿<ContentPage
+
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+    x:Class="ProjectManager.MainPage"
+
+    BackgroundColor="#DFF6FF">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label 
+
+            Text="Home"
+
+            FontSize="32"
+
+            FontAttributes="Bold"
+
+            TextColor="Black" />
+        <HorizontalStackLayout Spacing="20">
+            <Label Text="Home" TextColor="Purple" FontAttributes="Bold"/>
+            <Label Text="Nový projekt" TextColor="Gray"/>
+        </HorizontalStackLayout>
+        <Button 
+
+            Text="Click me"
+
+            HeightRequest="60"
+
+            CornerRadius="30"
+
+            TextColor="White"
+
+            FontSize="18">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#7B2FF7" Offset="0.0" />
+                    <GradientStop Color="#F107A3" Offset="1.0" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>
+ 
